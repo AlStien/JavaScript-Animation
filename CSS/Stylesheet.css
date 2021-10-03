@@ -10,7 +10,7 @@
 body{
     background: url(../Images/background.png) no-repeat;
     background-size: cover;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 a, li{
@@ -18,20 +18,19 @@ a, li{
     list-style: none;
 }
 
-/*--------header--------*/
+/*--------Header--------*/
 
 header{
+    display: flex;
+    justify-content: center;
     background-color: rgba(0, 0, 0, 0.75);
-    padding: 35px 10%;
-    padding-left: 14%;
+    padding: 35px 0;
     font-size: 18px;
+    box-shadow: 0 0 20px 0 #000;
 }
 
 .website-logo{
-    margin-left: 510px;
     background-image: url('../Images/Logo-white-logo.png');
-    align-items: center;
-    text-align: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -44,9 +43,8 @@ header{
 .content{
     margin: 20px;
     margin-left: 155px;
-    /* background-color: linear-gradient(rgb(6, 11, 71), rgb(4, 8, 59)); */
     width: 80%;
-    height: 600px;
+    height: 570px;
 }
 
 /*--------Footer--------*/
@@ -57,7 +55,7 @@ footer{
     justify-content: space-between;
     align-items: center;
     padding: 30px 10%;
-    box-shadow: 0 0 30px 0 #373737;
+    box-shadow: 0 0 25px 0 #000;
     justify-content: center;
     align-content: center;
 }
