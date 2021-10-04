@@ -8,9 +8,12 @@
 }
 
 body{
-    background: url(../Images/background.png) no-repeat;
+    background: url(../Images/background.png) repeat;
     background-size: cover;
-    /* overflow-y: hidden; */
+    /* overflow-x: hidden; */
+    height: 100vh;
+    /* min-height: 710px;
+    min-width: 1200px; */
 }
 
 a, li{
@@ -22,9 +25,10 @@ a, li{
 
 header{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.75);
-    padding: 35px 0;
+    width: 100%;
+    padding: 35px 100px;
     font-size: 18px;
     box-shadow: 0 0 20px 0 #000;
 }
@@ -36,30 +40,44 @@ header{
     background-size: cover;
     height: 50px;
     width: 75px;
+    cursor: pointer;
 }
 
 /*-------Content------*/
 
 .content{
+    margin: 30px 0;
     display: flex;
     justify-content: center;
-    margin: 20px;
-    /* margin-left: 155px; */
-    width: 80%;
+    width: 100%;
     height: 550px;
     position: relative;
+    /* overflow-y: hidden; */
 }
 
 #bground{
+    background-image: url(../Images/Morning.jpg);
+    z-index: 0;
     position: absolute;
-    left: 140px;
-    width: 100%;
+    width: 80%;
     height: 100%;
     background-color: #000;
     background-position: center;
-    background-repeat: repeat;
-    background-size: cover;
-    background-image: url(../Images/Morning.jpg);
+    background-repeat: repeat-x;
+    background-size: contain;
+    box-shadow: 0 0px 65px 0 #000;
+}
+
+#bground_object{
+    background-image: url(../Images/Morning-tree.png);
+    z-index: 2;
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat-x;
+    background-size: contain;
+    /* box-shadow: 0 0 25px 0 #000; */
 }
 
 #object{
@@ -67,7 +85,8 @@ header{
     width: 65px;
     z-index: 1;
     position: absolute;
-    bottom: 38px;
+    left: 60px;
+    bottom: 87px;
     background-image: url(../Images/naruto-run-1.png);
     background-position: center;
     background-repeat: repeat;
@@ -89,8 +108,6 @@ footer{
     align-items: center;
     padding: 30px 10%;
     box-shadow: 0 0 25px 0 #000;
-    justify-content: center;
-    align-content: center;
 }
 
 footer h1{
