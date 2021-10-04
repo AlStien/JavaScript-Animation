@@ -15,3 +15,18 @@ function prevBG()
         i=3;
     document.getElementById("bground").style.backgroundImage = bg[i];
 }
+
+let id=null;
+function bgMove()
+{
+    let bgr = document.getElementById("bground");
+    let pos = 0;
+    clearInterval(id);
+    id = setInterval(bgrMove, 10);
+    function bgrMove()
+    {
+        pos++;
+        bgr.style.backgroundPositionX = pos + "px";
+    }
+
+}
