@@ -38,7 +38,9 @@ function Move()
     function bgrMove()
     {
         if(b === false)
+        {
             bgPos=bgPos-3;
+        }
         else
             bgPos=bgPos+3;
         bgr_obj.style.backgroundPositionX = bgPos + "px";
@@ -65,15 +67,18 @@ function Move()
         else
             objPos = objPos-1.5
         obj.style.left = objPos + "px";
-        if(parseInt(object.style.left) >= screen.width*8/10)
+        //changing object direction when reaching end of background
+        if(parseInt(object.style.left) >= screen.width*8.05/10)
         {
             obj.style.transform = "rotateY(180deg)";
             b = true;
+            nextBG();       //to change background automatically whenever object changes direction
         }
         if(parseInt(object.style.left) <= -80)
         {
             obj.style.transform = "rotateY(360deg)";
             b = false;
+            nextBG();
         }
     }
 }
