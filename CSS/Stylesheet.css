@@ -4,16 +4,22 @@
     padding: 0;
     vertical-align: baseline;
     font-family: Bahnschrift, Montserrat, sans-serif;
-    transition-duration: 0.4s;
+    transition-duration: 0.2s;
 }
 
 body{
     background: url(../Images/background.png) repeat;
     background-size: cover;
-    /* overflow-x: hidden; */
+    overflow-y: scroll;         /*-- making overflow scroll to hide the scrollbar if content exceeds the screen --*/
     height: 100vh;
-    /* min-height: 710px;
-    min-width: 1200px; */
+}
+
+/*--------to hide the scrollbar--------*/
+/*-- webkit-scrollbar is a CSS pseudo-element that affects the 
+style of an element's scrollbar when it has overflow:scroll; --*/ 
+body::-webkit-scrollbar 
+{
+    display: none;
 }
 
 a, li{
@@ -24,6 +30,7 @@ a, li{
 /*--------Header--------*/
 
 header{
+    align-items: baseline;
     display: flex;
     justify-content: space-between;
     background-color: rgba(0, 0, 0, 0.75);
@@ -41,6 +48,22 @@ header{
     height: 50px;
     width: 75px;
     cursor: pointer;
+}
+
+.btn{
+    font-size: xx-large;
+    text-align: center;
+    padding: 7px 10px 5px 10px;
+    border-radius: 90%;
+    cursor: pointer;
+    border: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: #fff;
+}
+
+.btn:hover{
+    color: #000;
+    background-color: #fff;
 }
 
 /*-------Content------*/
@@ -92,12 +115,6 @@ header{
     background-position: center;
     background-repeat: repeat;
     background-size: cover;
-}
-
-.btn{
-    align-items: center;
-    text-align: center;
-    padding: 5px 10px 5px 10px;
 }
 
 /*--------Footer--------*/
