@@ -3,7 +3,11 @@ let bg_obj = ['url(Images/Morning-tree.png)', 'url(Images/desert-cactus.png)', '
 let objArr = ['url(Images/naruto-run-1.png)', 'url(Images/naruto-run-2.png)', 'url(Images/naruto-run-3.png)', 'url(Images/naruto-run-4.png)']
 let bgr = document.getElementById("bground");
 let bgr_obj = document.getElementById("bground_object");
+let obj = document.getElementById("object");
 let i=0, j=0;
+let b = false;
+
+//to bring next background
 function nextBG()
 {
     i++;
@@ -13,6 +17,7 @@ function nextBG()
     bgr_obj.style.backgroundImage = bg_obj[i];
 }
 
+//to bring previous background
 function prevBG()
 {
     i--;
@@ -24,28 +29,51 @@ function prevBG()
     bgr_obj.style.backgroundImage = bg_obj[i];
 }
 
+//for moving the background, object and object animation
 function Move()
 {
     //background move
-    let id=null;
-    let pos = 0;
-    clearInterval(id);
-    id = setInterval(bgrMove, 10);
+    let bgPos = 0;
+    setInterval(bgrMove, 10);
     function bgrMove()
     {
-        pos=pos-3;
-        bgr_obj.style.backgroundPositionX = pos + "px";
-        bgr.style.backgroundPositionX = pos + "px";
+        if(b === false)
+            bgPos=bgPos-3;
+        else
+            bgPos=bgPos+3;
+        bgr_obj.style.backgroundPositionX = bgPos + "px";
+        bgr.style.backgroundPositionX = bgPos + "px";
     }
 
-    //object move
-    let obj = document.getElementById("object");
-    let ob = setInterval(objMove, 120);
-    function objMove()
+    //object running animation
+    setInterval(objAnim, 120);
+    function objAnim()
     {
         j++;
         if(j===4)
             j=0;
         obj.style.backgroundImage = objArr[j];
+    }
+
+    //object movement
+    let objPos = 60;
+    setInterval(objMove, 10);
+    function objMove()
+    {
+        if(b===false)
+            objPos = objPos+1.5;
+        else
+            objPos = objPos-1.5
+        obj.style.left = objPos + "px";
+        if(parseInt(object.style.left) >= screen.width*8/10)
+        {
+            obj.style.transform = "rotateY(180deg)";
+            b = true;
+        }
+        if(parseInt(object.style.left) <= -80)
+        {
+            obj.style.transform = "rotateY(360deg)";
+            b = false;
+        }
     }
 }
