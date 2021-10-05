@@ -1,2 +1,4 @@
 # JavaScript-Animation
-This is just a trial attempt to learn JS animation.
+This is just a trial attempt to learn vanilla JS animation.
+# What is in the website
+The Website just has a character running with moving background
