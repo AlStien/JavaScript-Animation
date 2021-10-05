@@ -1,5 +1,5 @@
-let bg = ['url(../Images/Morning.jpg)', 'url(../Images/Desert.jpg)', 'url(../Images/Fuji.jpg)', 'url(../Images/Desert-2.jpg)'];
-let bg_obj = ['url(../Images/Morning-tree.png)', 'url(../Images/desert-cactus.png)', 'url(../Images/fuji-tree.png)','url(../Images/empty.png)']
+let bg = ['url(Images/Morning.jpg)', 'url(Images/Desert.jpg)', 'url(Images/Fuji.jpg)', 'url(Images/Desert-2.jpg)'];
+let bg_obj = ['url(Images/Morning-tree.png)', 'url(Images/desert-cactus.png)', 'url(Images/fuji-tree.png)','url(Images/empty.png)']
 let objArr = ['url(Images/naruto-run-1.png)', 'url(Images/naruto-run-2.png)', 'url(Images/naruto-run-3.png)', 'url(Images/naruto-run-4.png)']
 let bgr = document.getElementById("bground");
 let bgr_obj = document.getElementById("bground_object");
